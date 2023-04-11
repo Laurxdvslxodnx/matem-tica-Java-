@@ -32,6 +32,39 @@ public class matriz {
 			int cal6;
 			int Det;
 			
+package programation;
+
+import java.util.Scanner;
+
+public class matriz {
+	/* Alunas: Roberta Mucuta Coelho, Gabrielly Gonçalves Abati e Laura Lima Pinheiro
+	 * turma: 2 º TI, vespertino.
+	 */
+	
+	public static void main (String[]args) {
+		
+			Scanner Leitor = new Scanner(System.in);
+		
+			System.out.println("Matriz dos cofatores");
+			
+			System.out.print("Número de linha da matriz: ");
+			int LinhaM = Leitor.nextInt();
+			
+			System.out.print("Número de coluna da matriz: ");
+			int ColunaM = Leitor.nextInt();
+			
+			
+			int matriz[][] = new int[LinhaM][ColunaM];
+			int contadorL = 0;
+			int contadorC = 0; 	
+			int cal1;
+			int cal2;
+			int cal3;
+			int cal4;
+			int cal5;
+			int cal6;
+			int Det;
+			
 		
 			
 			while(contadorL < LinhaM ) {
@@ -56,15 +89,15 @@ public class matriz {
 			
 			// calculo da matriz dos cofatores
 			
-			matriz[0][0] = 1 * ((matriz[1][1] + matriz[2][2]) - (matriz[1][2] + matriz[2][1]));
-			matriz[1][0] = 1 * ((matriz[0][1] + matriz[2][2]) - (matriz[0][2] + matriz[2][1]));
-			matriz[2][0] = 1 * ((matriz[0][1] + matriz[1][2]) - (matriz[0][2] + matriz[1][1]));
-			matriz[0][1] = 1 * ((matriz[1][0] + matriz[2][2]) - (matriz[1][2] + matriz[2][0]));
-			matriz[1][1] = 1 * ((matriz[0][0] + matriz[2][2]) - (matriz[0][2] + matriz[2][0]));
-			matriz[2][1] = 1 * ((matriz[0][0] + matriz[1][2]) - (matriz[0][2] + matriz[1][0]));
-			matriz[0][2] = 1 * ((matriz[1][0] + matriz[2][1]) - (matriz[1][1] + matriz[2][0]));
-			matriz[1][2] = 1 * ((matriz[0][0] + matriz[2][1]) - (matriz[0][1] + matriz[2][0]));
-			matriz[2][2] = 1 * ((matriz[0][0] + matriz[1][1]) - (matriz[0][1] + matriz[1][1]));
+			matriz[0][0] = 1 * ((matriz[1][1] * matriz[2][2]) - (matriz[1][2] * matriz[2][1]));
+			matriz[1][0] = 1 * ((matriz[0][1] * matriz[2][2]) - (matriz[0][2] * matriz[2][1]));
+			matriz[2][0] = 1 * ((matriz[0][1] * matriz[1][2]) - (matriz[0][2] * matriz[1][1]));
+			matriz[0][1] = 1 * ((matriz[1][0] * matriz[2][2]) - (matriz[1][2] * matriz[2][0]));
+			matriz[1][1] = 1 * ((matriz[0][0] * matriz[2][2]) - (matriz[0][2] * matriz[2][0]));
+			matriz[2][1] = 1 * ((matriz[0][0] * matriz[1][2]) - (matriz[0][2] * matriz[1][0]));
+			matriz[0][2] = 1 * ((matriz[1][0] * matriz[2][1]) - (matriz[1][1] * matriz[2][0]));
+			matriz[1][2] = 1 * ((matriz[0][0] * matriz[2][1]) - (matriz[0][1] * matriz[2][0]));
+			matriz[2][2] = 1 * ((matriz[0][0] * matriz[1][1]) - (matriz[0][1] * matriz[1][1]));
 			
 			System.out.println("A matriz dos cofatores é: \n[" +matriz[0][0]+ "] [" +matriz[1][0]+ "] [" +matriz[2][0]+ "] \n[" +matriz[0][1]+ "] [" +matriz[1][1]+ "] [" +matriz[2][1]+ "] \n[" +matriz[0][2]+ "] [" +matriz[1][2]+ "] ["+ matriz[2][2]+ "]");
 			
